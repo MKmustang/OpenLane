@@ -30,7 +30,7 @@ module tdr_latch(
     logic q;
     
     always_ff @ (posedge clk or negedge rstb) begin
-        if (rstb == 0) begin
+        if (!rstb) begin
             q <= 1'b0;
         end
         else begin
