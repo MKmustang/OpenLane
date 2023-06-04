@@ -1,5 +1,5 @@
 `timescale 1ns / 1ps
-`include "/home/marko/MK_OpenLane/designs/time_domain_register/src/time_domain_register.sv"
+// `include "/home/marko/OpenLane/designs/time_domain_register/src/time_domain_register.sv"
 
 module time_domain_register_tb;
 

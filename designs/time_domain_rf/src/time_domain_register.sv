@@ -1,5 +1,5 @@
 `timescale 1ns / 1ps
-`include "../../../include/sky130_fd_sc_hd.v"
+// `include "/home/marko/MK_OpenLane/designs/time_domain_register/src/sky130_fd_sc_hd.v"
 // `include "/home/marko/MK_OpenLane/designs/time_domain_register/src/tdr_latch.sv"
 // `include "/home/marko/MK_OpenLane/designs/time_domain_register/src/ring_oscillator.sv"
 
