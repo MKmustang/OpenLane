@@ -1,8 +1,8 @@
 `timescale 1ns / 1ps
 
 module mux_8x1(
-    input [7:0]array_i,
-    input [2:0]sel_i,
+    input [7:0] array_i,
+    input [2:0] sel_i,
     output logic out_o
     );
     

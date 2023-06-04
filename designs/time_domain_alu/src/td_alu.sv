@@ -1,6 +1,4 @@
 `timescale 1ns / 1ps
-`include "buffer.sv"
-`include "mux_8x1.sv"
 
 module td_alu(
     input a,
@@ -12,7 +10,6 @@ module td_alu(
     );
 
     logic Gnd = 0;
-    logic Vdd = 1;
 
     // wires between buffers and digital gates 
     wire a_min_max;
@@ -26,44 +23,32 @@ module td_alu(
 
     buffer buffer_min_max_1(
         .in(a),
-        .out(a_min_max),
-        .Gnd(Gnd),
-        .Vdd(Vdd)
+        .out(a_min_max)
     );
 
     buffer buffer_min_max_2(
         .in(b),
-        .out(b_min_max),
-        .Gnd(Gnd),
-        .Vdd(Vdd)
+        .out(b_min_max)
     );
 
     buffer buffer_cmp_sub_1(
         .in(a),
-        .out(a_cmp_sub),
-        .Gnd(Gnd),
-        .Vdd(Vdd)
+        .out(a_cmp_sub)
     );
 
     buffer buffer_cmp_sub_2(
         .in(b),
-        .out(b_cmp_sub),
-        .Gnd(Gnd),
-        .Vdd(Vdd)
+        .out(b_cmp_sub)
     );
 
     buffer buffer_a(
         .in(a),
-        .out(just_a),
-        .Gnd(Gnd),
-        .Vdd(Vdd)
+        .out(just_a)
     );
 
     buffer buffer_b(
         .in(b),
-        .out(just_b),
-        .Gnd(Gnd),
-        .Vdd(Vdd)
+        .out(just_b)
     );
 
     // logic variables for TD operations
@@ -98,9 +83,7 @@ module td_alu(
     // last buffer to boost signal before output
     buffer buffer_out(
         .in(out),
-        .out(y),
-        .Gnd(Gnd),
-        .Vdd(Vdd)
+        .out(y)
     );
 
 endmodule
