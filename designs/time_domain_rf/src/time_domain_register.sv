@@ -1,5 +1,5 @@
 `timescale 1ns / 1ps
-// `include "/home/marko/MK_OpenLane/designs/time_domain_register/src/sky130_fd_sc_hd.v"
+`include "../../../include/sky130_fd_sc_hd.v"
 // `include "/home/marko/MK_OpenLane/designs/time_domain_register/src/tdr_latch.sv"
 // `include "/home/marko/MK_OpenLane/designs/time_domain_register/src/ring_oscillator.sv"
 
@@ -10,7 +10,6 @@ module time_domain_register(
     input WE1_i,
     input RE_i,
     input rstb_i,
-    output logic carry_o,
     output out_o
     );
     
@@ -24,6 +23,7 @@ module time_domain_register(
     
     ***/
     
+    logic carry_o;
     logic en;
     wire ch1, ch2, ch3, ch4, ch5, ch6, ch7;
     

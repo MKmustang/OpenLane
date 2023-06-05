@@ -10,7 +10,7 @@ module time_domain_register_tb;
     logic WE1_i;
     logic RE_i;
     logic rstb_i;
-    logic carry_o;
+    // logic carry_o;
     logic out_o;
 
     // DUT - tdr
@@ -19,7 +19,7 @@ module time_domain_register_tb;
         .WE1_i(WE1_i),
         .RE_i(RE_i),
         .rstb_i(rstb_i),
-        .carry_o(carry_o),
+        // .carry_o(carry_o),
         .out_o(out_o));
 
     initial begin

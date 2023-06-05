@@ -19,9 +19,9 @@ module td_rf(
 );
 
     // initializing logic and wires for module
-    wire [7:0] demux_we_arr;
-    wire [7:0] demux_fb_arr;
-    wire [7:0] demux_2x8_arr;
+    logic [7:0] demux_we_arr;
+    logic [7:0] demux_fb_arr;
+    logic [7:0] demux_2x8_arr;
 
     // making necessary connections below 
     demux_1x8 demux_we(
