@@ -25,6 +25,7 @@ module time_domain_register(
     
     logic carry_o;
     logic en;
+    logic invert_one, invert_two;
     wire ch1, ch2, ch3, ch4, ch5, ch6, ch7;
     
     assign en = WE0_i || WE1_i || RE_i;
@@ -67,8 +68,11 @@ module time_domain_register(
 
     sky130_fd_sc_hd__ebufn_2 buff8 (
         .A(ch7),
-        .Z(buffer_chain_o),
+        .Z(invert_one),
         .TE_B(en));
+
+    assign invert_two = !invert_one; 
+    assign buffer_chain_o = !invert_two;
         
     /***
     

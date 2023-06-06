@@ -91,7 +91,7 @@ module td_rf(
     // time_domain_registers assuming no feedback input. 
     wire [7:0] td_out;
 
-    tdr_concept tdr_0(
+    time_domain_register tdr_0(
         .WE0_i(demux_we_arr[0]),
         .WE1_i(demux_we_arr[0]),
         .RE_i(re_arr[0]),
@@ -100,7 +100,7 @@ module td_rf(
         .out_o(td_out[0])
     );
 
-    tdr_concept tdr_1(
+    time_domain_register tdr_1(
         .WE0_i(demux_we_arr[1]),
         .WE1_i(demux_we_arr[1]),
         .RE_i(re_arr[1]),
@@ -108,7 +108,7 @@ module td_rf(
         .out_o(td_out[1])
     );
 
-    tdr_concept tdr_2(
+    time_domain_register tdr_2(
         .WE0_i(demux_we_arr[2]),
         .WE1_i(demux_we_arr[2]),
         .RE_i(re_arr[2]),
@@ -116,7 +116,7 @@ module td_rf(
         .out_o(td_out[2])
     );
 
-    tdr_concept tdr_3(
+    time_domain_register tdr_3(
         .WE0_i(demux_we_arr[3]),
         .WE1_i(demux_we_arr[3]),
         .RE_i(re_arr[3]),
@@ -124,7 +124,7 @@ module td_rf(
         .out_o(td_out[3])
     );
 
-    tdr_concept tdr_4(
+    time_domain_register tdr_4(
         .WE0_i(demux_we_arr[4]),
         .WE1_i(demux_we_arr[4]),
         .RE_i(re_arr[4]),
@@ -132,7 +132,7 @@ module td_rf(
         .out_o(td_out[4])
     );
 
-    tdr_concept tdr_5(
+    time_domain_register tdr_5(
         .WE0_i(demux_we_arr[5]),
         .WE1_i(demux_we_arr[5]),
         .RE_i(re_arr[5]),
@@ -140,7 +140,7 @@ module td_rf(
         .out_o(td_out[5])
     );
 
-    tdr_concept tdr_6(
+    time_domain_register tdr_6(
         .WE0_i(demux_we_arr[6]),
         .WE1_i(demux_we_arr[6]),
         .RE_i(re_arr[6]),
@@ -148,7 +148,7 @@ module td_rf(
         .out_o(td_out[6])
     );
 
-    tdr_concept tdr_7(
+    time_domain_register tdr_7(
         .WE0_i(demux_we_arr[7]),
         .WE1_i(demux_we_arr[7]),
         .RE_i(re_arr[7]),
